@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting TikTok</title>
+<meta name="robots" content="noindex">
+<style>
+  body { font-family: system-ui, sans-serif; background: #f7f5f0; color: #23211c; margin: 0; padding: 48px 16px; }
+  main { max-width: 36rem; margin: 0 auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>Connecting TikTok…</h1>
+<p>Handing the login back to North of Midgard Studio on this computer. If nothing happens, make sure the studio is running, then try again.</p>
+</main>
+<script>
+  // TikTok only accepts https redirect addresses for this app; the studio runs on
+  // this computer, so pass TikTok's answer (code, state or error) straight on to it.
+  location.replace("http://localhost:8787/api/tiktok/oauth/callback" + location.search);
+</script>
+</body>
+</html>
